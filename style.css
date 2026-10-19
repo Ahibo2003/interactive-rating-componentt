@@ -1,0 +1,63 @@
+/* 1. تهيئة الشاشة وتوسيط الكرت بالكامل */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #121417; /* خلفية الشاشة الخارجية */
+}
+
+/* 2. الكرت الصغير الذكي */
+.container {
+    background-color: black;    /* لون الكرت الأساسي */
+    width: 380px;               /* عرض محدد للكرت ليظهر كصندوق */
+    padding: 30px;              /* الهامش الداخلي (الحشوة) لكي تتنفس العناصر */
+    border-radius: 20px;        /* انحناء زوايا الكرت الخارجي */
+    
+    display: flex;              /* تفعيل الفليكس للعناصر الداخلية */
+    flex-direction: column;     /* ترتيب العناصر عمودياً تحت بعضها */
+    gap: 20px;                  /* مسافة تلقائية بين العنوان والنص والأزرار */
+}
+
+h1 {
+    color: aliceblue;
+    margin: 0;
+}
+
+h3 {
+    color: rgb(149, 159, 162); /* تفتيح لون الخط قليلاً ليصبح مقروءاً */
+    font-weight: 400;           /* جعل الخط أنعم وليس عريضاً */
+    line-height: 1.5;           /* ترك مسافة مريحة بين أسطر الكلام */
+    margin: 0;
+}
+
+/* 3. حاوية الأزرار (توزيع أفقي جنب بعضهم) */
+.btn {
+    display: flex;
+    justify-content: space-between; /* توزيع الأزرار الخمسة بالتساوي */
+    margin-top: 10px;
+}
+
+/* 4. تصميم الأزرار الدائرية الخمسة (هنا السحر!) */
+.btn button {
+    width: 45px;                /* طول وعرض متساويين حتماً لنجاح الدائرة */
+    height: 45px;
+    border-radius: 50%;         /* جعل الزر دائرياً تماماً */
+    background-color: rgb(42, 49, 49);
+    color: rgb(111, 127, 128);           /* لون الرقم داخل الدائرة */
+    border: none;               /* إزالة الحواف الافتراضية البشعة للزر */
+    cursor: pointer;            /* ظهور شكل اليد عند تمرير الماوس */
+}
+
+/* 5. زر الـ Submit المستطيل البرتقالي */
+#sud {
+    background-color: rgb(245, 102, 36);
+    color: black;
+    border: none;
+    padding: 12px;              /* إعطاء سماكة وحجم للزر */
+    border-radius: 25px;        /* منحنيات ناعمة لزوايا الزر المستطيل */
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;        /* ترك مسافة بين حروف كلمة SUBMIT */
+}
